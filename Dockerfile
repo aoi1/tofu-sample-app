@@ -6,11 +6,11 @@ ARG project_dir=/app/
 
 WORKDIR /app/
 
-ADD index.js $project_dir
-ADD index.html $project_dir
-ADD public $project_dir
-ADD package.json $project_dir
-ADD package-lock.json $project_dir
+COPY index.js $project_dir
+COPY index.html $project_dir
+COPY public $project_dir/public
+COPY package.json $project_dir
+COPY package-lock.json $project_dir
 
 RUN npm install
 
